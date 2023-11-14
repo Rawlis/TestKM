@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainPageController">
+   <children>
+      <GridPane layoutX="152.0" layoutY="97.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="351.0" minHeight="10.0" prefHeight="158.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="562.0" minHeight="10.0" prefHeight="562.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="1075.0" style="-fx-background-color: #FFFFFF;" GridPane.columnSpan="2">
+               <children>
+                  <Label layoutX="62.0" layoutY="64.0" text="농장주인">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="FarmerName" layoutX="191.0" layoutY="65.0" prefHeight="29.0" prefWidth="118.0" text="임시">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #182921;" GridPane.rowIndex="1">
+               <children>
+                  <TableView fx:id="HouseTableView" layoutX="57.0" layoutY="130.0" prefHeight="388.0" prefWidth="427.0" />
+                  <Label layoutX="57.0" layoutY="55.0" style="-fx-background-color: #FFFFFF;" text="하우스">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <DatePicker layoutX="506.0" layoutY="130.0" />
+                  <Button fx:id="HouseInfoButton" layoutX="498.0" layoutY="315.0" mnemonicParsing="false" onAction="#HouseInfoViewButton" prefHeight="51.0" prefWidth="134.0" text="하우스 상세뷰" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FABCED;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ListView fx:id="WarningList" layoutX="33.0" layoutY="128.0" prefHeight="391.0" prefWidth="296.0" />
+                  <Label layoutX="58.0" layoutY="50.0" style="-fx-background-color: #FFFFFF;" text="경고리스트">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
